@@ -16,6 +16,7 @@ Basically, the final tidy set, which stored in 'stat.txt', comes after 10 steps:
 
 ## Output: stat.txt
 The dimension of stat is 180 * 69. 180 is the final rows of the output, 69 is 69 interested features:
+
  [1] "subject"                       
  [2] "activityCode"                  
  [3] "activityName"                   
@@ -80,8 +81,10 @@ The dimension of stat is 180 * 69. 180 is the final rows of the output, 69 is 69
 [62] "AVEfBodyAccMag-mean()"         
 [63] "AVEfBodyAccMag-std()"           
 [64] "AVEfBodyBodyAccJerkMag-mean()" 
+
 [65] "AVEfBodyBodyAccJerkMag-std()"   
 [66] "AVEfBodyBodyGyroMag-mean()"    
 [67] "AVEfBodyBodyGyroMag-std()"      
 [68] "AVEfBodyBodyGyroJerkMag-mean()"
+
 [69] "AVEfBodyBodyGyroJerkMag-std()"
