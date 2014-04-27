@@ -12,3 +12,8 @@ The script run_analysis.R works on Samsung dataset, which can be downloaded @htt
 * Extract only the measurements on the mean and standard deviation for each measurement. 
 * Use descriptive activity names to name the activities in the data set
 * Create a independent tidy data set with the average of each variable for each activity and each subject in a file call stat.txt 
+
+## File List:
+* run_analysis.R : analysis script
+* CookBook.md : describes the variables, the data, and any transformations or work performed to clean up the data
+* README.md : explains how all of the scripts work and how they are connected
