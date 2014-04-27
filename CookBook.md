@@ -3,16 +3,16 @@ This CodeBook explains how the run_analysis.R process to get the final tidy set.
 
 ## Procedure
 Basically, the final tidy set, which stored in 'stat.txt', comes after 10 steps:
-1. combine test dataset: merge subject, y and X test dataset by columns and produce a test dataset called 'test' with dimension 2947 * 563
-2. combine training dataset: merge subject, y, and X training dataset by columns and produce training dataset called 'train' with dimension 7352 * 563
-3. merge training and test set: merge test dataset and training dataset into one set by rows called 'total'
-4. produce 1:1 match activity name according to activity code: according to activity code which is in the second column of the total dataset, create a character vector called 'activityName' contains the activity names to each entry of the activity code.
-5. extract interested features: features in total dataset including subject, activity code and features computed in mean() or std() are interested features. These feature names are extracted into a character vector call 'intereased_features' and their corresponding indexes are extracted into a numeric vector call 'indexes'. According to the indexes, a subset of total dataset called 'tmpInterested' is created.
-6. add activity name into dataset: combine activityName with tmpInterested dataset, producing 'totalInterested' which contains all of interested features.
-7. reorder columns: reorder to columns in totalInterested dataset such at the columns is in the order of subject, activityCode, activityName, features computed with mean() or std()..
-8. Compute average of interested features per subject per activity: aggregate data for each subject and activity, and compute the average of interested features obtained by mean() or std(). The result is saved into a dataframe called 'stat'
-9. Add feature names to rows and columns of the output dataset: give the each row the name according to their index in the stat. Give their column names as 'subject', 'activityCode', 'activityName', 'AVE[+ original name in input dataset]'
-10: Output the result to stat.txt file: write the final dataset stat into stat.txt 
+* combine test dataset: merge subject, y and X test dataset by columns and produce a test dataset called 'test' with dimension 2947 * 563
+* combine training dataset: merge subject, y, and X training dataset by columns and produce training dataset called 'train' with dimension 7352 * 563
+* merge training and test set: merge test dataset and training dataset into one set by rows called 'total'
+* produce 1:1 match activity name according to activity code: according to activity code which is in the second column of the total dataset, create a character vector called 'activityName' contains the activity names to each entry of the activity code.
+* extract interested features: features in total dataset including subject, activity code and features computed in mean() or std() are interested features. These feature names are extracted into a character vector call 'intereased_features' and their corresponding indexes are extracted into a numeric vector call 'indexes'. According to the indexes, a subset of total dataset called 'tmpInterested' is created.
+* add activity name into dataset: combine activityName with tmpInterested dataset, producing 'totalInterested' which contains all of interested features.
+* reorder columns: reorder to columns in totalInterested dataset such at the columns is in the order of subject, activityCode, activityName, features computed with mean() or std()..
+* Compute average of interested features per subject per activity: aggregate data for each subject and activity, and compute the average of interested features obtained by mean() or std(). The result is saved into a dataframe called 'stat'
+* Add feature names to rows and columns of the output dataset: give the each row the name according to their index in the stat. Give their column names as 'subject', 'activityCode', 'activityName', 'AVE[+ original name in input dataset]'
+* Output the result to stat.txt file: write the final dataset stat into stat.txt 
 
 ## Output: stat.txt
 The dimension of stat is 180 * 69. 180 is the final rows of the output, 69 is 69 interested features:
