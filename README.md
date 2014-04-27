@@ -17,3 +17,4 @@ The script run_analysis.R works on Samsung dataset, which can be downloaded @htt
 * run_analysis.R : analysis script
 * CookBook.md : describes the variables, the data, and any transformations or work performed to clean up the data
 * README.md : explains how all of the scripts work and how they are connected
+* stat.txt : output file of analysis script (final output)
